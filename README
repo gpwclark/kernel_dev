@@ -1,0 +1,6 @@
+# First Kernel Path
+	- http://kernelnewbies.org/FirstKernelPatch
+# External Modules
+	- http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/kbuild/modules.txt
+# Main Kernel Docs
+	- https://www.kernel.org/doc/Documentation/HOWTO
