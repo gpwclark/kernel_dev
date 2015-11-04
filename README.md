@@ -1,6 +1,5 @@
 # The Eudylpta Challenge
-> I'm working on the linux kernel's secret-ish eudlypta challenge and while you can't post any actual code I figured
-it would behoove me to post different things I found helpful for setup, configuration, reference, etc. 
+> I'm working on the linux kernel's secret-ish [eudlypta challenge](http://eudyptula-challenge.org/) and while you can't post any actual code, I figured it would behoove me to post different things I found helpful for setup, configuration, reference, etc. 
 
 
 ## Configure your computer (I'm on fedora)
@@ -10,17 +9,26 @@ it would behoove me to post different things I found helpful for setup, configur
 - [Install VBox on fedora](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/?PageSpeed=noscript)
 
 ### Install Vagrant, download provided, the rest is in your capable hands
-- vagrant makes it painfully easy to set up a virtual box with command line access...
+- Vagrant makes it painfully easy to set up a virtual box with command line access...
 - [Vagrant download](http://www.vagrantup.com/downloads)
 
+### Alt Instructions for VBox and Vagrant
+- This process can be fairly complicated depending on your arch ( and simply because VMs are complicated). Check out [these instructions](http://tott-meetup.readthedocs.org/en/latest/setup.html) if you need more help.
+- As a sidenote, occasionally it may be the case that your actual hardware is not set up to enable virtualization. As a last ditch attempt (I had to do this) check the specs for you computer/manufacturer to figure out how to boot into the BIOS and make sure that virtualization is enabled. I have a Lenvo: [how to enable virtualization in BIOS on lenovo](http://amiduos.com/support/knowledge-base/article/enabling-virtualization-in-lenovo-systems)
+
 ### Getting Ubuntu set up for kernel development
-- Once you get vagrant installed you just need to run 
-  ```
-  vagrant up
-  vagrant ssh
-  ```
-- [Use this vagrant box](https://vagrantcloud.com/ubuntu/boxes/trusty32)
-- [Configure the VM](http://buttle.anu.edu.au/mediawiki/index.php/How_to_set_up_Kernel_Development_in_Virtual_Box)
+- [Use this vagrant box](https://vagrantcloud.com/ubuntu/boxes/trusty32)... although the thing you really need from the link is this one-liner:
+
+```
+vagrant init ubuntu/trusty32; vagrant up --provider virtualbox
+```
+
+- Once you get the vagrant box initialized you just need to run 
+```
+vagrant ssh
+```
+- Vagrant is pretty cool (while linux containers are waaaay cooler, containers don't get their own kernel), so if you want to do more with the box I recommend going [here](http://tott-meetup.readthedocs.org/en/latest/sessions/vagrant.html), playing around with some exercises and reading some of the links.
+- This is the part that I know much less about, but I found [this link](http://buttle.anu.edu.au/mediawiki/index.php/How_to_set_up_Kernel_Development_in_Virtual_Box) pointed me to some packages I needed.
 
 ### Notes on style
 - [First Kernel Patch](http://kernelnewbies.org/FirstKernelPatch)
