@@ -1,31 +1,17 @@
+scriptencoding utf-8 
+" ^^ Please leave the above line at the start of the file.
+
 set t_Co=256
 
 colorscheme evening
-scriptencoding utf-8 
-" ^^ Please leave the above line at the start of the file.
 
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on    " required
 
 syn on se title
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 
 " Default configuration file for Vim
 " $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/files/vimrc-r4,v 1.3 2010/04/15 19:30:32 darkside Exp $
@@ -227,6 +213,10 @@ syn on se title
   " }}}
 
   " vim: set fenc=utf-8 tw=80 sw=2 sts=2 et foldmethod=marker :
+  augroup vimrc
+    au BufReadPre * setlocal foldmethod=indent
+    au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+  augroup END
 
   set autochdir
   set fileformats=unix,dos,mac
