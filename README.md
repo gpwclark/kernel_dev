@@ -33,11 +33,14 @@ vagrant ssh
 ### Notes on style
 - [First Kernel Patch](http://kernelnewbies.org/FirstKernelPatch)
 
+### The End All Be All Kernel Documentation
+- [Kernel Docs](https://www.kernel.org/doc/Documentation/HOWTO)
+
 
 ## Making a small kernel module
 
-### The End All Be All Kernel Documentation
-- [Kernel Docs](https://www.kernel.org/doc/Documentation/HOWTO)
+### A book on kernel modules
+- Some very highly [recommended reading](http://www.tldp.org/LDP/lkmpg/2.6/html/c38.html) on a really great site.
 
 ### Building External Modules
 - [Direction straight from the man!](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/kbuild/modules.txt)

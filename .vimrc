@@ -213,11 +213,8 @@ syn on se title
   " }}}
 
   " vim: set fenc=utf-8 tw=80 sw=2 sts=2 et foldmethod=marker :
-  augroup vimrc
-    au BufReadPre * setlocal foldmethod=indent
-    au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
-  augroup END
-
+  set foldmethod=syntax
+  set foldlevelstart=1
   set autochdir
   set fileformats=unix,dos,mac
   set hidden
