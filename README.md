@@ -1,4 +1,4 @@
-# The Eudylpta Challenge
+# The Eudyptula Challenge
 > I'm working on the linux kernel's secret-ish [eudlypta challenge](http://eudyptula-challenge.org/) and while you can't post any actual code, I figured it would behoove me to post different things I found helpful for setup, configuration, reference, etc. 
 
 
