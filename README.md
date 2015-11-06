@@ -47,3 +47,4 @@ vagrant ssh
 
 ### Writing a Simple Kernel Module
 - [directions for code and makefile](http://www.thegeekstuff.com/2013/07/write-linux-kernel-module/)
+- Debugging and printing messages kernel style is [important](http://tuxthink.blogspot.com/2012/07/printk-and-console-log-level.html).
