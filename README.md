@@ -6,7 +6,7 @@
 
 ### Install VirtualBox (This article was a godsend)
 - You never know what stupid things you could do to your own kernel, so use a VM. 
-- [Install VBox on fedora](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/?PageSpeed=noscript)
+- [Install VBox on fedora](http://www.if-not-true-then-false.com/2010/install-virtualbox-with-yum-on-fedora-centos-red-hat-rhel/)
 
 ### Install Vagrant, download provided, the rest is in your capable hands
 - Vagrant makes it painfully easy to set up a virtual box with command line access...

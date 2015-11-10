@@ -1,1 +1,8 @@
 /eudyptula
+/.distcc
+/.cache
+/.rnd
+/.viminfo
+/distcc_3.1-1_i386.deb
+/.ssh
+/.vagrant
