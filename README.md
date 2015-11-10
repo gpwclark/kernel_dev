@@ -48,3 +48,10 @@ vagrant ssh
 ### Writing a Simple Kernel Module
 - [directions for code and makefile](http://www.thegeekstuff.com/2013/07/write-linux-kernel-module/)
 - Debugging and printing messages kernel style is [important](http://tuxthink.blogspot.com/2012/07/printk-and-console-log-level.html).
+
+
+## Working with the linux kernel
+
+### Using Git on the linux kernel source
+- [This](http://www.landley.net/writing/git-bisect-howto.html) is an excellent how-to that will help you navigate the gritty gitty core of torvald's kernel.
+- [This](http://kernelnewbies.org/KernelBuild) is a guide to building your own linux kernel from the source.
