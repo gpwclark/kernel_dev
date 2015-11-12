@@ -55,6 +55,7 @@ vagrant ssh
 ### Using Git on the linux kernel source
 - [This](http://www.landley.net/writing/git-bisect-howto.html) is an excellent how-to that will help you navigate the gritty gitty core of torvald's kernel.
 - [This](http://kernelnewbies.org/KernelBuild) is a guide to building your own linux kernel from the source.
+- [This](http://free-electrons.com/doc/books/lkn.pdf) is a book about customizing and building a kernel... Probably the best resource.
 
 ### Compiling a kernel
 - Compiling a kernel is a pain if you don't have enough resources (because you decided to not allocate much to your VM) I recommend using distcc to compile on any spare computers you may or may not have lying around.
