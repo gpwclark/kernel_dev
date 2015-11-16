@@ -13,7 +13,7 @@
 - [Vagrant download](http://www.vagrantup.com/downloads)
 
 ### Alt Instructions for VBox and Vagrant
-- This process can be fairly complicated depending on your arch ( and simply because VMs are complicated). Check out [these instructions](http://tott-meetup.readthedocs.org/en/latest/setup.html) if you need more help.
+- This process can be fairly complicated depending on your OS. Check out [these instructions](http://tott-meetup.readthedocs.org/en/latest/setup.html) if you need more help.
 - As a sidenote, occasionally it may be the case that your actual hardware is not set up to enable virtualization. As a last ditch attempt (I had to do this) check the specs for you computer/manufacturer to figure out how to boot into the BIOS and make sure that virtualization is enabled. I have a Lenvo: [how to enable virtualization in BIOS on lenovo](http://amiduos.com/support/knowledge-base/article/enabling-virtualization-in-lenovo-systems)
 
 ### Getting Ubuntu set up for kernel development
