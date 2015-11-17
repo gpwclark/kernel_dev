@@ -32,6 +32,8 @@ vagrant ssh
 
 ### Notes on style
 - [First Kernel Patch](http://kernelnewbies.org/FirstKernelPatch)
+- The [linux kernel coding style](https://www.kernel.org/doc/Documentation/CodingStyle) guide-- an absolute must read.
+- When in doubt default to [this](https://hassanolity.files.wordpress.com/2013/11/the_c_programming_language_2.pdf) book. This is the 2nd edition to *The C Programming Language* by Kernighan and Ritchie. Linux calls it K&R in the codying style docs. 
 
 ### The End All Be All Kernel Documentation
 - [Kernel Docs](https://www.kernel.org/doc/Documentation/HOWTO)
@@ -47,8 +49,14 @@ vagrant ssh
 
 ### Writing a Simple Kernel Module
 - [directions for code and makefile](http://www.thegeekstuff.com/2013/07/write-linux-kernel-module/)
-- Debugging and printing messages kernel style is [important](http://tuxthink.blogspot.com/2012/07/printk-and-console-log-level.html).
+- Debugging and printing messages kernel style is [important](http://elinux.org/Debugging_by_printing#Log_Levels).
+  - Keep in mind with kernel printing you can use the printk functions with an appropriate log level, however, when you run the checkpatch.pl script it will yell ("warn") at you to use the alias functions, e.g.
 
+```
+printk(KERN_DEBUG "I am a debug message");
+/* versus */
+pr_debug("I am a better debug message");
+```
 
 ## Working with the linux kernel
 
