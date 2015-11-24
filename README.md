@@ -13,7 +13,7 @@
 - [Vagrant download](http://www.vagrantup.com/downloads)
 
 ### Alt Instructions for VBox and Vagrant
-- This process can be fairly complicated depending on your arch ( and simply because VMs are complicated). Check out [these instructions](http://tott-meetup.readthedocs.org/en/latest/setup.html) if you need more help.
+- This process can be fairly complicated depending on your OS. Check out [these instructions](http://tott-meetup.readthedocs.org/en/latest/setup.html) if you need more help.
 - As a sidenote, occasionally it may be the case that your actual hardware is not set up to enable virtualization. As a last ditch attempt (I had to do this) check the specs for you computer/manufacturer to figure out how to boot into the BIOS and make sure that virtualization is enabled. I have a Lenvo: [how to enable virtualization in BIOS on lenovo](http://amiduos.com/support/knowledge-base/article/enabling-virtualization-in-lenovo-systems)
 
 ### Getting Ubuntu set up for kernel development
@@ -32,6 +32,8 @@ vagrant ssh
 
 ### Notes on style
 - [First Kernel Patch](http://kernelnewbies.org/FirstKernelPatch)
+- The [linux kernel coding style](https://www.kernel.org/doc/Documentation/CodingStyle) guide-- an absolute must read.
+- When in doubt default to [this](https://hassanolity.files.wordpress.com/2013/11/the_c_programming_language_2.pdf) book. This is the 2nd edition to *The C Programming Language* by Kernighan and Ritchie. Linux calls it K&R in the codying style docs. 
 
 ### The End All Be All Kernel Documentation
 - [Kernel Docs](https://www.kernel.org/doc/Documentation/HOWTO)
@@ -47,14 +49,25 @@ vagrant ssh
 
 ### Writing a Simple Kernel Module
 - [directions for code and makefile](http://www.thegeekstuff.com/2013/07/write-linux-kernel-module/)
-- Debugging and printing messages kernel style is [important](http://tuxthink.blogspot.com/2012/07/printk-and-console-log-level.html).
+- Debugging and printing messages kernel style is [important](http://elinux.org/Debugging_by_printing#Log_Levels).
+  - Keep in mind with kernel printing you can use the printk functions with an appropriate log level, however, when you run the checkpatch.pl script it will yell ("warn") at you to use the alias functions, e.g.
 
+```
+printk(KERN_DEBUG "I am a debug message");
+/* versus */
+pr_debug("I am a better debug message");
+```
 
 ## Working with the linux kernel
 
 ### Using Git on the linux kernel source
 - [This](http://www.landley.net/writing/git-bisect-howto.html) is an excellent how-to that will help you navigate the gritty gitty core of torvald's kernel.
+
+### Compiling a kernel
 - [This](http://kernelnewbies.org/KernelBuild) is a guide to building your own linux kernel from the source.
+- [This](http://free-electrons.com/doc/books/lkn.pdf) is a book about customizing and building a kernel... Probably the best resource. Keep in mind it is for the 2.6 kernel so some of the information may be a little dated.
+- I ended up compiling and running my kernel natively. Fedora uses grub2 which can be a moderate headache. I highly recommend using the program "grub-customizer" if you need to edit your configuration after you have installed the kernel.
+
 
 ### Documentation?
 - Obviously there is kernel documentation and you should build it so you can have access to the fabled man 9 pages.
