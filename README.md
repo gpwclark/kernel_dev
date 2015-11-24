@@ -55,3 +55,14 @@ vagrant ssh
 ### Using Git on the linux kernel source
 - [This](http://www.landley.net/writing/git-bisect-howto.html) is an excellent how-to that will help you navigate the gritty gitty core of torvald's kernel.
 - [This](http://kernelnewbies.org/KernelBuild) is a guide to building your own linux kernel from the source.
+
+### Documentation?
+- Obviously there is kernel documentation and you should build it so you can have access to the fabled man 9 pages.
+
+```
+// In the kernel source directory run (make sure you have xmlto installed):
+$ make mandocs
+# make installmandocs
+// Now you can run:
+man 9 printk
+```
