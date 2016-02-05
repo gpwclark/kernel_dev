@@ -60,6 +60,11 @@ pr_debug("I am a better debug message");
 
 ## Working with the linux kernel
 
+### Efficiently searching the source
+- Searching the source code can be invaluabe when looking for a solution. Using ctags or cscope can greatly assist you here.
+- [cscope](http://cscope.sourceforge.net/large_projects.html) makes a database of the source code that you can use to quickly search.
+- [ctags](https://tejparkash.wordpress.com/2011/03/07/ctags-with-linux-source/) are also a useful tool for jumping around source code.
+
 ### Using Git on the linux kernel source
 - [This](http://www.landley.net/writing/git-bisect-howto.html) is an excellent how-to that will help you navigate the gritty gitty core of torvald's kernel.
 
@@ -79,3 +84,9 @@ $ make mandocs
 // Now you can run:
 man 9 printk
 ```
+
+## Making a kernel module for USB
+- For background [chapter 14](http://www.makelinux.net/ldd3/chp-14) of linux device drivers is a must read.
+- Although [this](http://www.linuxjournal.com/article/7353) article is a little outdated. This how-to demonstrates much of what needs to be done.
+- [This](https://www.kernel.org/doc/Documentation/usb/hotplug.txt) kernel documentation is more up to date and should be read to see necessary changes from the greg kh linux journal article above.
+- [This](http://lxr.free-electrons.com/source/drivers/hid/usbhid/usbkbd.c) is a sample driver for a usb keyboard.
